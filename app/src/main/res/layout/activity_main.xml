@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/quantity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="6sp"
+        android:layout_marginTop="6sp"
+        android:textSize="20sp"
+        android:text="Quantity:" />
+
+    <TextView
+        android:id="@+id/how_many"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/quantity"
+        android:layout_marginStart="6sp"
+        android:textSize="20sp"
+        android:textColor="@android:color/black"
+        android:text="0" />
+
+    <TextView
+        android:id="@+id/price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/how_many"
+        android:layout_marginStart="6sp"
+        android:layout_marginTop="6sp"
+        android:textSize="20sp"
+        android:text="Price" />
+
+    <TextView
+        android:id="@+id/cost"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/price"
+        android:layout_marginStart="6sp"
+        android:textSize="20sp"
+        android:textColor="@android:color/black"
+        android:text="$0" />
+
+    <Button
+        android:id="@+id/order"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/cost"
+        android:layout_marginStart="6sp"
+        android:text="ORDER"
+        app:backgroundTint="#979797"
+        android:onClick="submitOrder"/>
+
+
+
+</RelativeLayout>
