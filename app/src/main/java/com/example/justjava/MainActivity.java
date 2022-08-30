@@ -2,6 +2,7 @@ package com.example.justjava;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.annotation.SuppressLint;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
@@ -16,14 +17,39 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
     }
 
+    int numOfCoffees = 0;
     //when the button is clicked
     public void submitOrder(View view)
     {
-        display(1);
-        displayPrice(1 * 5);
+        display(numOfCoffees);
+        displayPrice(numOfCoffees * 5);
     }
 
-    //display sets the TextView to 1
+    public void add(View view)
+    {
+        addCoffee(numOfCoffees);
+    }
+
+    public void subtract(View view)
+    {
+        subtractCoffee(numOfCoffees);
+    }
+
+    private void addCoffee(int num)
+    {
+        numOfCoffees++;
+        display(numOfCoffees);
+    }
+
+    private void subtractCoffee(int num)
+    {
+        if (numOfCoffees > 0)
+        {
+            numOfCoffees--;
+            display(numOfCoffees);
+        }
+    }
+
     private void display(int num)
     {
         TextView howMany = (TextView) findViewById(R.id.how_many);
@@ -33,6 +59,7 @@ public class MainActivity extends AppCompatActivity {
     private void displayPrice(int num)
     {
         TextView cost = (TextView) findViewById(R.id.cost);
-        cost.setText(NumberFormat.getCurrencyInstance().format(num));
+        cost.setText("Total: " + NumberFormat.getCurrencyInstance().format(num) +
+                    "\nThank you!");
     }
 }
