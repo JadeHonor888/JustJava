@@ -16,23 +16,47 @@
         android:textSize="20sp"
         android:text="Quantity:" />
 
-    <TextView
-        android:id="@+id/how_many"
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/quantity"
-        android:layout_marginStart="6sp"
-        android:textSize="20sp"
-        android:textColor="@android:color/black"
-        android:text="0" />
+        android:id="@+id/howManyLine">
+
+        <Button
+            android:id="@+id/plusOne"
+            android:layout_width="40dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="6sp"
+            android:text="+"
+            app:backgroundTint="#979797"
+            android:onClick="add"/>
+
+        <TextView
+            android:id="@+id/how_many"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="6sp"
+            android:textSize="20sp"
+            android:textColor="@android:color/black"
+            android:text="0" />
+
+        <Button
+            android:id="@+id/minusOne"
+            android:layout_width="40dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="6sp"
+            android:text="-"
+            app:backgroundTint="#979797"
+            android:onClick="subtract"/>
+    </LinearLayout>
+
 
     <TextView
         android:id="@+id/price"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/how_many"
+        android:layout_below="@+id/howManyLine"
         android:layout_marginStart="6sp"
-        android:layout_marginTop="6sp"
         android:textSize="20sp"
         android:text="Price" />
 
