@@ -17,6 +17,7 @@
         android:layout_height="wrap_content"
         android:layout_marginEnd="40sp"
         android:inputType="textCapWords"
+        android:backgroundTint="#008"
         android:hint="Name"
         android:onClick="getName"/>
 
@@ -25,8 +26,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Toppings:"
-        android:textSize="20sp"
-        android:textColor="@color/black"
+        style="@style/CustomText"
         android:layout_marginStart="6sp"
         android:layout_marginTop="6sp"
         android:layout_below="@+id/enterName"/>
@@ -39,6 +39,7 @@
         android:fontFamily="sans-serif"
         android:layout_marginStart="6sp"
         android:text="\t Whipped Cream"
+        android:buttonTint="#008"
         android:layout_below="@+id/toppings"
         android:textColor="@android:color/black"
         android:onClick="toppings1"/>
@@ -50,6 +51,7 @@
         android:fontFamily="sans-serif"
         android:layout_marginStart="6sp"
         android:text="\t Chocolate"
+        android:buttonTint="#008"
         android:layout_below="@+id/whippedCream"
         android:textColor="@android:color/black"
         android:onClick="toppings2"/>
@@ -61,9 +63,8 @@
         android:layout_below="@+id/chocolate"
         android:layout_marginStart="6sp"
         android:layout_marginTop="30sp"
-        android:textColor="@android:color/black"
-        android:text="Quantity:"
-        android:textSize="20sp" />
+        style="@style/CustomText"
+        android:text="Quantity:" />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -77,7 +78,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="6sp"
             android:text="+"
-            app:backgroundTint="#979797"
+            app:backgroundTint="#008"
             android:onClick="add"/>
 
         <TextView
@@ -95,7 +96,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="6sp"
             android:text="-"
-            app:backgroundTint="#979797"
+            app:backgroundTint="#008"
             android:onClick="subtract"/>
 
     </LinearLayout>
@@ -108,8 +109,7 @@
         android:layout_below="@+id/howManyLine"
         android:layout_marginStart="6sp"
         android:layout_marginTop="30sp"
-        android:textSize="20sp"
-        android:textColor="@android:color/black"
+        style="@style/CustomText"
         android:text="Price:" />
 
     <TextView
@@ -129,7 +129,7 @@
         android:layout_below="@+id/cost"
         android:layout_marginStart="6sp"
         android:text="ORDER"
-        app:backgroundTint="#979797"
+        app:backgroundTint="#008"
         android:onClick="submitOrder"/>
 
 
